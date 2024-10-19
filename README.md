@@ -1,45 +1,52 @@
-# Projet de Classification et Détection des Défauts de Voitures
+# 🚗 Project: Car Damage Classification and Defect Detection
 
-## Description du projet
-Ce projet vise à classifier les voitures endommagées et non endommagées à l'aide de deux modèles de réseaux de neurones : CNN et VGG19. Après la classification, nous avons utilisé Detectron2 pour la détection des défauts sur une base de données différente.
+![Car Classification](https://img.shields.io/badge/Project-Car_Classification-orange?style=for-the-badge&logo=car&logoColor=white)
+![Detectron2](https://img.shields.io/badge/Framework-Detectron2-blue?style=for-the-badge&logo=python&logoColor=white)
 
-## Objectifs :
-- Comparer la performance de **CNN** et **VGG19** pour la classification binaire.
-- Utiliser **Detectron2** pour la détection des défauts sur des images de voitures.
+## 🌟 Project Description
+This project aims to classify cars into damaged and undamaged categories using two neural network models: **CNN** and **VGG19**. After classification, we utilized **Detectron2** for defect detection on a different dataset.
 
-## Modèles de Classification
-Nous avons formé deux modèles différents pour la classification binaire des voitures en deux catégories : endommagées et non endommagées. Voici les détails :
+## 🎯 Objectives
+- Compare the performance of **CNN** and **VGG19** for binary classification.
+- Use **Detectron2** for defect detection on car images.
 
-### Modèle CNN :
-Nous avons construit un modèle de réseau neuronal convolutif (**CNN**) personnalisé, entraîné sur un jeu de données d'images de voitures endommagées et non endommagées. Le CNN a montré des résultats impressionnants avec une précision de **91,46%** sur le jeu de validation. Ce modèle a bien généralisé sur des données non vues pendant l'entraînement, ce qui en fait un choix solide pour cette tâche de classification.
+## 📊 Classification Models
+We trained two different models for the binary classification of cars into damaged and undamaged categories. Here are the details:
 
-#### Résultats de CNN :
-- **Précision de validation** : 91,46%
-- **Perte de validation** : Faible perte, indiquant une bonne généralisation.
-- **Mesures d'évaluation** : Précision, rappel, et F1-score ont été calculés et montrent une bonne performance dans la classification des deux classes.
+### **CNN Model**
+We built a custom Convolutional Neural Network (**CNN**) trained on a dataset of damaged and undamaged car images. The CNN achieved an impressive validation accuracy of **91.46%**. This model generalized well on unseen data, making it a solid choice for this classification task.
 
-### Modèle VGG19 :
-Nous avons également testé le modèle **VGG19**, une architecture pré-entraînée, afin de comparer ses performances avec le CNN. VGG19 a montré une précision légèrement inférieure, avec des signes de surapprentissage (**overfitting**) indiqués par une fluctuation notable dans les résultats de validation.
+#### **CNN Results:**
+- **Validation Accuracy**: 91.46%
+- **Validation Loss**: Low loss, indicating good generalization.
+- **Evaluation Metrics**: Precision, recall, and F1-score were calculated and showed good performance in classifying both classes.
 
-#### Résultats de VGG19 :
-- **Précision de validation** : 50%
-- **Problèmes rencontrés** : Surapprentissage observé, ce qui a conduit à une performance inférieure comparée au CNN.
-- **Mesures d'évaluation** : Précision, rappel et F1-score étaient significativement plus bas que ceux du CNN.
+### **VGG19 Model**
+We also tested the **VGG19** model, a pre-trained architecture, to compare its performance with the CNN. VGG19 demonstrated slightly lower accuracy, with signs of overfitting indicated by notable fluctuations in validation results.
 
-## Comparaison des Modèles :
-Le **CNN** a surpassé **VGG19** en termes de généralisation et de précision, ce qui fait de lui le meilleur modèle pour la classification binaire des voitures endommagées et non endommagées dans notre cas.
+#### **VGG19 Results:**
+- **Validation Accuracy**: 50%
+- **Issues Encountered**: Observed overfitting, leading to lower performance compared to CNN.
+- **Evaluation Metrics**: Precision, recall, and F1-score were significantly lower than those of CNN.
 
-## Détection des Défauts avec Detectron2
-Après la classification, nous avons utilisé **Detectron2**, un framework de détection d'objets développé par **Meta** (anciennement Facebook AI), pour la détection des défauts dans les voitures. Nous avons utilisé une base de données différente spécialement conçue pour la détection de défauts visuels.
+## ⚖️ Model Comparison
+The **CNN** outperformed **VGG19** in terms of generalization and accuracy, making it the best model for the binary classification of damaged and undamaged cars in our case.
 
-### Étapes :
-- **Prétraitement des données** : Nous avons préparé un autre jeu de données pour la détection avec Detectron2.
-- **Entraînement** : Nous avons formé un modèle de détection basé sur une architecture de type **Faster R-CNN** disponible dans Detectron2.
-- **Résultats** : Le modèle a détecté efficacement plusieurs types de défauts visuels sur les images de test.
+## 🔍 Defect Detection with Detectron2
+After classification, we used **Detectron2**, an object detection framework developed by **Meta** (formerly Facebook AI), for detecting defects in cars. We employed a different dataset specifically designed for visual defect detection.
 
-## Base de Données
-- **Classification binaire** : Un jeu de données contenant des images de voitures endommagées et non endommagées a été utilisé pour entraîner les modèles CNN et VGG19.
-- **Détection des défauts** : Un second jeu de données, distinct, a été utilisé pour la tâche de détection avec Detectron2.
+### **Steps:**
+- **Data Preprocessing**: We prepared another dataset for detection with Detectron2.
+- **Training**: We trained a detection model based on a **Faster R-CNN** architecture available in Detectron2.
+- **Results**: The model effectively detected several types of visual defects in the test images.
 
-## Conclusion
-En conclusion, l'analyse des résultats a montré que le **CNN** était plus performant que **VGG19** pour la classification binaire des voitures. Ensuite, **Detectron2** s'est avéré efficace pour la détection des défauts, ouvrant la voie à une intégration dans des systèmes de détection de défauts automatiques pour l'industrie automobile.
+## 📁 Datasets
+- **Binary Classification**: A dataset containing images of damaged and undamaged cars was used to train the CNN and VGG19 models.
+- **Defect Detection**: A second, distinct dataset was used for the detection task with Detectron2.
+
+## 🏁 Conclusion
+In conclusion, the analysis of results showed that **CNN** outperformed **VGG19** for binary classification of cars. Subsequently, **Detectron2** proved effective for defect detection, paving the way for integration into automatic defect detection systems for the automotive industry.
+
+---
+
+
